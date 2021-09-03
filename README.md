@@ -258,6 +258,7 @@ Just some apps I think are inportant
     sudo dpkg-reconfigure libdvd-pkg
     sudo apt install VLC GIMP kdenlive Audacity rar p7zip xarchiver gnome-tweak-tool Trash-cli Youtube-dl neofetch htop ncdu speedtest-cli -y
 ``
+
 From the Pop Shop install the following:
 
 

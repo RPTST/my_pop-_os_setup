@@ -287,12 +287,13 @@ From The Firefox web browser go to https://extensions.gnome.org/
 In the top tooltip "Click here to install browser extension." Click and install the extensions plugin.
 
 ``
-Here install:
-dash to dock
-dash to panel
-User theme
-Application Menu
-etc.
+
+    Here install:
+    dash to dock
+    dash to panel
+    User theme
+    Application Menu
+    etc.
 
 ``
 

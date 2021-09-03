@@ -390,4 +390,4 @@ or if that does not work
     
 ``
 
-This is the end for now, but a there is always more todo and see the list will continue to grow I am sure.
+This is the end for now, but as there is always more todo and see the list will continue to grow I am sure.

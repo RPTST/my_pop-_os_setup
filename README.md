@@ -259,7 +259,10 @@ Just some apps I think are inportant
     sudo apt install VLC GIMP kdenlive Audacity rar p7zip xarchiver gnome-tweak-tool Trash-cli Youtube-dl neofetch htop ncdu speedtest-cli -y
 ``
 From the Pop Shop install the following:
+
+
 ``
+
     OBS Studio
     Lutris
     Steam + proton
@@ -269,6 +272,8 @@ From the Pop Shop install the following:
     timeshift
     Cool-Retro-Term
 ``
+
+    
 
 From The Firefox web browser go to https://extensions.gnome.org/
 In the top tooltip "Click here to install browser extension." Click and install the extensions plugin.

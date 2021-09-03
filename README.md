@@ -1,14 +1,29 @@
-# SETUP on Ubuntu 20.04
+# My setup of Pop!_OS 20.04
 
 # First
 
 Using Rufus
-Connect an SD card reader with the SD card inside. Open Rufus Imager and choose the required OS from the list presented. Choose the SD card you wish to write your image to. Review your selections and click 'WRITE' to begin writing data to the SD card. Please use this site to download: https://rufus.ie/en/
+1. Connect an thumb drive into your PC. 
+2. Go to the system 76 Pop!_os download page, https://pop.system76.com/. 
+3. Download Rufus, Please use this site to download: https://rufus.ie/en/
+4. Open Rufus Imager and choose the required OS from the list presented. Please be sure to 'Choose' the SD card you wish to write your image to. 
+5. Review your selections and click 'WRITE' to begin writing data to the SD card. 
+6. Once this is done please remove the thumb drive.
+7. Insert the thumb drive into the PC that is being imaged.
+8. Turn the PC on and boot into the PC Bios with either F2, F12, or Delete key.
+9. Make sure to specify the USB drive in boot and continue.
+10. Please choose your language, keyboard layout and country
+11. Please choose wheather your installing on a new/clean installation, an existing installation or custome.
+12. Then choose your Hard Disk drive.
+13. Please choose your name/username
+14. Please choose your password
+15. Then install
+16. Then wait for the system to install and fishish before the PC will reboot into your installation.
 
-## To enable Wi-Fi / Ethernet
-Find the file named “network-config” and open it in a text editor. On Windows, you can right-click -> “open with” and select any text editor you want.
+## To enable Wi-Fi / Ethernet (if not installed during setup)
+Find the file named “50-cloud-init.yaml” and open it in a text editor. 
 
-`network-config`
+`sudo nano /etc/netplan/50-cloud-init.yaml`
 
     version: 2
     ethernets:
@@ -51,7 +66,7 @@ Then reboot the system
 
 `sudo reboot`
 
-Once log into please add the pi user
+Once log into please add the user1 user
 
 `sudo adduser user1`
 
@@ -74,6 +89,14 @@ Inaddition please add the user1 user to the sudoers so if we need to have super 
 `sudo usermod -aG sudo user1`
 
 Once this is done please logout and back in for changes to take effect.
+
+# Set Up Automatic Security Update
+
+``
+
+    $sudo apt install unattended-upgrades
+    $sudo dpkg-reconfigure --priority=low unattended-upgrades
+``
 
 # Installing some addition apps
 
@@ -147,6 +170,7 @@ Usage:
 
 ``
 
+    $sudo apt install rlwrap
     $curl https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
     $chmod +x /usr/local/bin/cht.sh
 ``

@@ -170,19 +170,6 @@ Usage:
 
 `$cht.sh go reverse a list`
 
-- cool-retro-term
-
-``
-
-    $wget https://github.com/Swordfish90/cool-retro-term/releases/download/1.1.1/Cool-Retro-Term-1.1.1-x86_64.AppImage
-    $chmod a+x Cool-Retro-Term-1.1.1-x86_64.AppImage
-    $./Cool-Retro-Term-1.1.1-x86_64.AppImage
-``
-   
-Usage:
-
-`$./Cool-Retro-Term`
-
 
 - bpytop
 
@@ -210,6 +197,7 @@ Usage:
 ``
     
 Usage:
+
     `$speedtest`
 
 
@@ -225,6 +213,7 @@ Usage:
 Usage:
 
     `$speedtest | lolcat`
+    
 
 - lsdir
 
@@ -257,6 +246,7 @@ Usage:
 
  `$ls`
 
+
 - Additional Apps
 
 Just some apps I think are inportant
@@ -277,6 +267,7 @@ From the Pop Shop install the following:
     Firefox
     Krusader
     timeshift
+    Cool-Retro-Term
 ``
 
 From The Firefox web browser go to https://extensions.gnome.org/

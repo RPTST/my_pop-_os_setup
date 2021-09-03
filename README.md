@@ -261,6 +261,41 @@ Usage:
 
  `$ls`
 
+- Additional Apps
+
+Just some apps I think are inportant
+
+``
+
+    sudo apt install ubuntu-restricted-extras
+    sudo apt install libdvd-pkg
+    sudo dpkg-reconfigure libdvd-pkg
+    sudo apt install VLC GIMP kdenlive Audacity rar p7zip xarchiver gnome-tweak-tool Trash-cli Youtube-dl neofetch htop ncdu speedtest-cli -y
+``
+From the Pop Shop install the following:
+``
+    OBS Studio
+    Lutris
+    Steam + proton
+    Chromium
+    Firefox
+    Krusader
+    timeshift
+``
+
+From The Firefox web browser go to https://extensions.gnome.org/
+In the top tooltip "Click here to install browser extension." Click and install the extensions plugin.
+
+``
+Here install:
+dash to dock
+dash to panel
+User theme
+Application Menu
+etc.
+
+``
+
 
 # Install Docker and Compose
 

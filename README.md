@@ -7,7 +7,7 @@ Using Rufus
 2. Go to the system 76 Pop!_os download page, https://pop.system76.com/. 
 3. Download Rufus, Please use this site to download: https://rufus.ie/en/
 4. Open Rufus Imager and choose the required OS from the list presented. Please be sure to 'Choose' the SD card you wish to write your image to. 
-5. Review your selections and click 'WRITE' to begin writing data to the SD card. 
+5. Review your selections and click 'WRITE' to begin writing data to the SD card. (you will get a warning about the own of the ISO not being part of part of the group allowed to make ISO with MBR partitions and will have to use DD instead, just say "yes" or "ok".
 6. Once this is done please remove the thumb drive.
 7. Insert the thumb drive into the PC that is being imaged.
 8. Turn the PC on and boot into the PC Bios with either F2, F12, or Delete key.

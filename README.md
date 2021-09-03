@@ -142,6 +142,19 @@ Usage:
 `$./MyPaint-v2.0.0-1.AppImage`
 
 
+- sabaki
+
+``
+
+    $https://github.com/SabakiHQ/Sabaki/releases/download/v0.52.0/sabaki-v0.52.0-linux-x64.AppImage
+    $chmod +x sabaki-v0.52.0-linux-x64.AppImage
+
+``
+   
+Usage:
+
+`$./sabaki-v0.52.0-linux-x64.AppImage`
+
 
 - cheat Sheet
 

@@ -68,7 +68,7 @@ Then reboot the system
 
 Once log into please add the user1 user
 
-`sudo adduser user1`
+`sudo adduser user1 -m -s /bin/bash -c "Administrative User"`
 
 Below is the output.  Please enter a password and then confirm it and press enter through the rest of the questions, for expedency, or answer if you like.
 
@@ -86,9 +86,24 @@ Below is the output.  Please enter a password and then confirm it and press ente
 
 Inaddition please add the user1 user to the sudoers so if we need to have super user privilages we can do so.
 
-`sudo usermod -aG sudo user1`
+`sudo usermod -aG sudo,adm,docker user1`
 
 Once this is done please logout and back in for changes to take effect.
+
+If the password screen did not appear simply type the following:
+
+`$passwd user1`
+
+You should no see the following:
+
+``
+
+    Enter new UNIX password: 
+    Retype new UNIX password: 
+    passwd: password updated successfully
+    
+``
+
 
 # Set Up Automatic Security Update
 
@@ -97,6 +112,17 @@ Once this is done please logout and back in for changes to take effect.
     $sudo apt install unattended-upgrades
     $sudo dpkg-reconfigure --priority=low unattended-upgrades
 ``
+
+# Install APT package Manager
+
+- synaptic
+
+``
+
+    $sudo apt install synaptic
+    
+``
+
 
 # Installing some addition apps
 

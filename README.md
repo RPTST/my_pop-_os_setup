@@ -143,24 +143,6 @@ Usage:
 
 
 
-
-- cockpit
-
-``
-
-    $sudo apt install cockpit
-    $sudo apt install cockpit-machines
-    $sudo systemctl start cockpit
-    $sudo systemctl status cockpit
-``
-   
-Usage:
-
-`https://your_ip:9090`
-
-
-
-
 - cheat Sheet
 
 ``
@@ -298,146 +280,33 @@ In the top tooltip "Click here to install browser extension." Click and install 
 ``
 
 
-# Install Docker and Compose
+- cockpit (KVM)
 
-    curl -sSL https://get.docker.com | sh
-    
-Add the pi user to the docker group so we do not have to use sudo evertime we want to launch a container.
+``
 
-`sudo usermod -aG docker pi`
+    $sudo apt install cockpit
+    $sudo apt install cockpit-machines
+    $sudo systemctl start cockpit
+    $sudo systemctl status cockpit
+``
+   
+Usage:
 
-Once this is done please logout and back in for changes to take effect.
-
-    sudo apt-get install -y libffi-dev libssl-dev python3 python3-pip
-    sudo pip3 -v install docker-compose
-
-# Create a Docker Network
-
-`docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1  -o parent=eth0 my_net`
-
-# Install Portainer
-
-    docker pull portainer/portainer-ce:linux-arm
-    sudo docker run --restart always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:linux-arm
-    
-You should now be able to navigate to the IP address of your Raspberry Pi and port 9000 to access Portainer. When you get there, create a username and password.
-
-`http://[RASPBERRY_PI_IP_ADDRESS]:9000`
-
-# Install Webmin
-
-add webmin to the repository list.
-
-`sudo nano /etc/apt/sources.list.d/webmin.list`
-
-    deb https://download.webmin.com/download/repository sarge contrib
-
-Press control + o and then Control + x to exit
-
-Get the key for the repository.
-
-    wget https://download.webmin.com/jcameron-key.asc
-    sudo apt-key add jcameron-key.asc
-
-Next, we will need to get the package information from the Webmin Debian repository.
-
-`sudo apt update`
-
-Now we will install Webmin
-
-    sudo apt install apt-show-versions libauthen-pam-perl libio-pty-perl libnet-ssleay-perl perl-openssl-defaults
-    sudo apt install webmin
- 
- if you get an error while installing do the following:
- 
-    sudo-fix-broken install
-    sudo apt install webmin
-    
-I know it seem redundent to run the install twice just trust me when I say you need to here.
-
-You should now be able to navigate to the IP address of your Raspberry Pi and port 10000 to access Webmin. 
-
-`http://[RASPBERRY_PI_IP_ADDRESS]:10000`
-
-# piKIS setup
-
-PiKISS (Pi Keeping It Simple, Stupid!) are scripts (Bash) for Raspberry Pi boards (Raspberry OS mainly, TwisterOS and Debian derivates, all of them in 32 bits versions), which has a menu that will allow you to install some applications or configure files automatically as easy as possible.
-
-`curl -sSL https://git.io/JfAPE | bash`
-
-# Install Pi-Apps
-
-Pi-Apps is a GUI menu which basically is a list of pre-made apps you can install with one click for the desktop.
-
-`wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash`
-
-# Install HP printer drivers
-
-`https://sourceforge.net/projects/hplip/`
+`https://your_ip:9090`
 
 or
 
-`https://developers.hp.com/hp-linux-imaging-and-printing`
+- virtualbox
 
+`$sudo apt install virtualbox`
 
-# Please see the below for additional services you can run:
+or if that does not work
 
+``
 
-Plex media server
-
-`https://github.com/plexinc/pms-docker`
-
-
-Jellyfin Media server
-
-    https://hub.docker.com/r/linuxserver/jellyfin 
-    or 
-    https://github.com/jellyfin/jellyfin
-
-
-Fog server (A free open-source network computer cloning and management solution)
-
-`https://github.com/RPTST/fog-server`
-
-
-LANCACHE monolithic and DNS server (LAN Party game caching made easy)
-
-    https://github.com/lancachenet/docker-compose
-    https://github.com/lancachenet/lancache-dns
-
-
-Samba share (File Share)
-
-`https://github.com/DeftWork/samba`
-
-
-NextCloud Server (Dropbox at home replacement)
-
-`https://hub.docker.com/r/linuxserver/nextcloud`
-
-
-Homeassistant server (Home automation)
-
-`https://hub.docker.com/r/linuxserver/homeassistant`
-
-
-LibraNMS (Network Monitoring System)
-
-    https://github.com/librenms/docker 
-    or 
-    https://github.com/jarischaefer/docker-librenms
-
-
-Pi-Hole (whole home network add blocker and URL Filter)
-
-`https://hub.docker.com/r/pihole/pihole`
-
-
-AdGuardHome (whole home network add blocker and URL Filter)
-
-`https://hub.docker.com/r/adguard/adguardhome`
-
-
-Google Coder (learn coding at home)
-
-`https://github.com/hypriot/rpi-google-coder`
+    $wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+    $sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
+    $sudo apt update
+    $sudo apt install virtualbox-6.1 virtualbox-guest-additions-iso
+    
+``

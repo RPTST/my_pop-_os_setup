@@ -253,10 +253,12 @@ Just some apps I think are inportant
 
 ``
 
-    sudo apt install ubuntu-restricted-extras
-    sudo apt install libdvd-pkg
-    sudo dpkg-reconfigure libdvd-pkg
-    sudo apt install VLC GIMP kdenlive Audacity rar p7zip xarchiver gnome-tweak-tool Trash-cli Youtube-dl neofetch htop ncdu speedtest-cli -y
+    $sudo apt install ubuntu-restricted-extras
+    $sudo apt install libdvd-pkg
+    $sudo dpkg-reconfigure libdvd-pkg
+    $sudo apt install VLC GIMP kdenlive Audacity rar xarchiver gnome-tweak-tool Trash-cli Youtube-dl neofetch htop ncdu speedtest-cli -y
+    $sudo apt install mosh neofetch git nixnote2 guake qmmp synaptic p7zip-full cheese ntfs-3g ffmpeg ettercap-graphical yersinia -y
+    
 ``
 
 From the Pop Shop install the following:
@@ -272,6 +274,19 @@ From the Pop Shop install the following:
     Krusader
     timeshift
     Cool-Retro-Term
+    Wireshark
+    discord
+    skype
+    zoom-client
+    teams-for-linux
+    nmap
+    handbrake
+    solitaire
+    code
+    rpi-imager
+    mumble
+    GameHub
+    
 ``
 
     
@@ -289,6 +304,20 @@ In the top tooltip "Click here to install browser extension." Click and install 
     etc.
 
 ``
+
+# exFat update (https://github.com/arter97/exfat-linux)
+
+``
+
+    sudo add-apt-repository ppa:arter97/exfat-linux
+    sudo apt update
+    sudo apt install exfat-dkms
+``
+
+   
+# Angry IP scanner
+
+`$wget https://github.com/angryip/ipscan/releases/download/3.7.2/ipscan_3.7.2_amd64.deb`
 
 
 - cockpit (KVM)
@@ -326,3 +355,39 @@ or if that does not work
     
     
 ``
+
+
+- Katrain
+
+``
+
+    $sudo apt update && sudo apt upgrade
+    $sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+    $sudo apt install build-essential libssl-dev libffi-dev python3-dev xclip xsel python3.6 python-pip3 cython3 -y
+    $sudo apt install libsdl2-dev libsdl2-2.0-0 -y
+    $sudo apt install libmikmod-dev libfishsound1-dev libsmpeg-dev liboggz2-dev libflac-dev libfluidsynth-dev libsdl2-mixer-dev libsdl2-mixer-2.0-0 -y
+    $sudo apt install ffmpeg libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev libswscale-dev\
+         libswresample-dev libpostproc-dev libsdl2-dev libsdl2-2.0-0 libsdl2-mixer-2.0-0 libsdl2-mixer-dev python3-dev
+    $sudo apt install libjpeg-dev libwebp-dev libtiff5-dev libsdl2-image-dev libsdl2-image-2.0-0 -y
+    $sudo apt install libfreetype6-dev libsdl2-ttf-dev libsdl2-ttf-2.0-0 -y
+    $sudo apt-get install python3-pip build-essential git python3 python3-dev ffmpeg libsdl2-dev libsdl2-image-dev\
+         libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev\
+         libgstreamer1.0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good libpulse\
+         pkg-config libgl-dev opencl-headers ocl-icd-opencl-dev
+    $sudo apt install software-properties-common
+    $sudo add-apt-repository ppa:deadsnakes/ppa
+    $sudo apt update
+    $python3 -m pip install ffpyplayer
+    $python3 -m pip install clipboard
+    $python3 -m pip install pygame
+    $python3 -m pip install -U katrain
+    $python3 -m pip uninstall kivy
+    $python3 -m pip install --no-binary kivy kivy==2.0.0rc2
+    
+    *python3.6 -m venv my_env
+    
+    $python3 -m katrain
+    
+``
+
+This is the end for now, but a there is always more todo and see the list will continue to grow I am sure.

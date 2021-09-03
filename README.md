@@ -309,7 +309,7 @@ or
 
 - virtualbox
 
-`$sudo apt install virtualbox`
+`$sudo apt install virtualbox virtualbox-ext-pack`
 
 or if that does not work
 

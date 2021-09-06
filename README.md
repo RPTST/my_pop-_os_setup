@@ -151,6 +151,30 @@ Usage:
 
 `$sysmontask`
 
+- Gaming setup
+
+
+``
+
+    $pip3 install LibreGaming
+    $LibreGaming -a
+    
+``
+
+LibreGaming: command not found.
+
+This error can be solved by setting up the PATH in your shell you can do this by entering these lines in your shell file(.bashrc or .zshrc)
+
+* Note that the LibreGaming Script is saved in ~/.local/bin directory by default.
+
+``
+### PATH
+
+if [ -d "$HOME/.local/bin" ] ;
+  then PATH="$HOME/.local/bin:$PATH"
+fi
+``
+
 
 - Application Image Installer
 

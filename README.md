@@ -21,30 +21,36 @@ Using Rufus
 16. Then wait for the system to install and fishish before the PC will reboot into your installation.
 
 ## To enable Wi-Fi / Ethernet (if not installed during setup)
-#Find the file named “50-cloud-init.yaml” and open it in a text editor. 
-#
-#`sudo nano /etc/netplan/50-cloud-init.yaml`
-#
-#    version: 2
-#    ethernets:
-#       eth0:
-#          dhcp4: true
-#	  optional: true
-#    wifis:
-#      wlan0:
-#        dhcp4: true
-#	optional: true
-#	access-points:
-#	  "YOUR_WIFI_NAME":
-#	    password: "YOUR_WIFI_PASSWORD"
-#
-#
-#
-#A few things to pay attention to:
-#
-#1. Make sure the indentation is exactly 2 spaces. No tab, no 4 spaces.
-#2. Replace YOUR_WIFI_NAME with your actual Wi-Fi name. Keep the quotes “”.
-#3. Replace YOUR_WIFI_PASSWORD with the password for the Wi-Fi. Keep the quotes “”.
+
+
+``
+
+    #Find the file named “50-cloud-init.yaml” and open it in a text editor. 
+    #
+    #`sudo nano /etc/netplan/50-cloud-init.yaml`
+    #
+    #    version: 2
+    #    ethernets:
+    #       eth0:
+    #          dhcp4: true
+    #	  optional: true
+    #    wifis:
+    #      wlan0:
+    #        dhcp4: true
+    #	optional: true
+    #	access-points:
+    #	  "YOUR_WIFI_NAME":
+    #	    password: "YOUR_WIFI_PASSWORD"
+    #
+    #
+    #
+    # A few things to pay attention to:
+    #
+    # 1. Make sure the indentation is exactly 2 spaces. No tab, no 4 spaces.
+    # 2. Replace YOUR_WIFI_NAME with your actual Wi-Fi name. Keep the quotes “”.
+    # 3. Replace YOUR_WIFI_PASSWORD with the password for the Wi-Fi. Keep the quotes “”.
+
+``
 
 To fix my laptops network drops I had to use the following command, as I have a Broadcom brcm4313 wifi card:
 

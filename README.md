@@ -394,17 +394,27 @@ In the top tooltip "Click here to install browser extension." Click and install 
    
 # Angry IP scanner
 
-`$wget https://github.com/angryip/ipscan/releases/download/3.7.2/ipscan_3.7.2_amd64.deb`
+``
 
+    $wget https://github.com/angryip/ipscan/releases/download/3.7.2/ipscan_3.7.2_amd64.deb
+    $sudo dpkg -i ipscan_3.7.2_amd64.deb
+``
 
 - cockpit (KVM)
 
 ``
 
     $sudo apt install cockpit
-    $sudo apt install cockpit-machines
+    $sudo apt install cockpit cockpit-machines pcp cockpit-pcp packagekit cockpit-packagekit virt-viewer -y
+    $sudo systemctl enable cockpit
     $sudo systemctl start cockpit
+    $sudo systemctl enable pmcd
+    $sudo systemctl enable pmlogger
+    $sudo systemctl start pmcd
+    $sudo systemctl start pmlogger
     $sudo systemctl status cockpit
+    $sudo systemctl status pmcd
+    $sudo systemctl status pmlogger
 ``
    
 Usage:

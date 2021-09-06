@@ -174,11 +174,11 @@ This error can be solved by setting up the PATH in your shell you can do this by
 * Note that the LibreGaming Script is saved in ~/.local/bin directory by default.
 
 ``
-### PATH
 
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
+    ### PATH
+    if [ -d "$HOME/.local/bin" ] ;
+       then PATH="$HOME/.local/bin:$PATH"
+    fi
 ``
 
 
